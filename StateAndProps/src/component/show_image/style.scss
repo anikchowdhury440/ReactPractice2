@@ -1,0 +1,55 @@
+@mixin col-1 {
+    width: 20%;
+    margin-left: 4%;
+}
+@mixin col-2 {
+    width: 30%;
+    margin-left: 2.5%;
+}
+@mixin col-3 {
+    width: 44%;
+    margin-left: 4%;
+} 
+@mixin col-4 {
+    width: 90%;
+    margin-left: 5%;}
+.images {
+    height: 200px;
+    margin-bottom: 3%;
+    @media (min-width: 1500px) {
+        @include col-1()
+    }
+    @media (min-width: 1200px) and (max-width: 1499px) {
+        @include col-2()
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        @include col-3()
+    }
+    @media (max-width: 767px) {
+        @include col-4()
+    }
+}
+.heading {
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.image-name {
+    float: right;
+    margin-right: 10%;
+    margin-top: 125px;
+    width : 20%;
+    @media (max-width: 750px) {
+        margin-top: 60px;
+    }
+}
+.images-search {
+    height: 300px;
+    margin-bottom: 3%;
+    width: 40%;
+    margin-left: 10%;
+    @media (max-width: 750px) {
+        height: 150px;
+    }
+}
